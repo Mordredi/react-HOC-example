@@ -1,6 +1,6 @@
 /* eslint react/prefer-stateless-function: "off" */
 
-import React, { Component } from 'react';
+import React from 'react';
 
 import {
   BrowserRouter as Router,
@@ -8,18 +8,14 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import { Login } from './login';
-import { Home } from './home';
+import { LoginValidation } from './login';
+import { HomeValidation } from './home';
 
-export default class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route component={Home} />
-        </Switch>
-      </Router>
-    );
-  }
-}
+export default () => (
+  <Router>
+    <Switch>
+      <Route path="/login" component={LoginValidation} />
+      <Route component={HomeValidation} />
+    </Switch>
+  </Router>
+);
