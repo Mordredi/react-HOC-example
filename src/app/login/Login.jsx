@@ -1,5 +1,14 @@
 import React from 'react';
 
+const onSubmit = (ev) => {
+  ev.preventDefault();
+  console.log('login');
+};
+
 export const Login = () => (
-  <h1>Login</h1>
+  <section className="login">
+    <form onSubmit={onSubmit}>
+      <button type="submit">Log in</button>
+    </form>
+  </section>
 );
