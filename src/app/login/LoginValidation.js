@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { logIn, Login } from '.';
-import { AuthRedirect } from '../common/AuthRedirect';
+import { AuthRedirect, FormValidation } from '../common';
 
 const mapStateToProps = ({ loggedIn }) => ({
   loggedIn,
@@ -18,4 +18,14 @@ const mapDispatchToProps = dispatch => ({
 export const LoginValidation = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(AuthRedirect(Login, true));
+)(AuthRedirect(
+  FormValidation({
+    email: {
+      required: true,
+    },
+    password: {
+      required: true,
+    },
+  }, Login),
+  true,
+));

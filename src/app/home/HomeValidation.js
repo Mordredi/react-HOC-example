@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { Home } from '.';
-import { AuthRedirect } from '../common/AuthRedirect';
+import { AuthRedirect } from '../common';
 
 const mapStateToProps = ({ loggedIn }) => ({
   loggedIn,
