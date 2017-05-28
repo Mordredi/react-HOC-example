@@ -32,13 +32,3 @@ export const FormValidation = (validations, FormComponent) => (
     }
   }
 );
-  // const onChange = (ev) => {
-    // const newValidations = validations[name].required && value.length
-      // ? Object.assign({}, validations, {
-        // [name]: Object.assign({}, validations[name], { valid: true }),
-      // })
-      // : Object.assign({}, validations, {
-        // [name]: Object.assign({}, validations[name], { valid: false }),
-      // });
-    // return <FormComponent {...props} onChange={onChange} validations={newValidations} />;
-  // };
