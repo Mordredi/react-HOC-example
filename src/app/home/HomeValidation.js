@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { Home } from '.';
-import { AuthRedirect } from '..';
+import { AuthRedirect } from '../hoc';
 
 const mapStateToProps = ({ loggedIn }) => ({
   loggedIn,
